@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 #import "ICDSessionTask.h"
 #import "ICDRequest.h"
@@ -31,5 +32,10 @@
  @param request Запрос ICDRequest
  */
 - (ICDSessionTask *)performRequest:(ICDRequest *)request;
+
+/**
+ Загружает и кеширует изображение
+ */
+- (void)imageWithURL:(NSURL *)imageURL withCompletionBlock:(void (^)(UIImage *image, NSError *error))completionBlock;
 
 @end

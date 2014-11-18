@@ -78,5 +78,59 @@
     return [ICDSessionTask sessionTaskWithDataTask:task];
 }
 
+- (void)imageWithURL:(NSURL *)imageURL withCompletionBlock:(void (^)(UIImage *image, NSError *error))completionBlock
+{
+    // Формирование запроса
+    NSURLRequest *request = [NSURLRequest requestWithURL:imageURL cachePolicy:NSURLRequestReturnCacheDataElseLoad timeoutInterval:20];
+    
+    // Проверка изображения в кэше
+    NSCachedURLResponse * cachedResponse = [[NSURLCache sharedURLCache] cachedResponseForRequest:request];
+    
+    // Если кеш есть, то вернуть его через completionBlock
+    if(cachedResponse && cachedResponse.data) {
+        if(completionBlock)
+            completionBlock([UIImage imageWithData:cachedResponse.data], nil);
+        
+        return;
+    }
+    
+    // Изображения нет в кэше
+    NSURLSessionDownloadTask *task = [self.session downloadTaskWithRequest:request completionHandler:^(NSURL *location, NSURLResponse *response, NSError *error) {
+        
+        UIImage *image = nil;
+        
+        if(!error) {
+            
+            NSData *data = [[NSData alloc] initWithContentsOfURL:location];
+            
+            if(data) {
+                
+                // Сохранение изображения в кеш
+                NSCachedURLResponse *cachedResponse = [[NSCachedURLResponse alloc] initWithResponse:response
+                                                                                               data:data
+                                                                                           userInfo:nil
+                                                                                      storagePolicy:NSURLCacheStorageAllowed];
+                
+                [[NSURLCache sharedURLCache] storeCachedResponse:cachedResponse
+                                                      forRequest:request];
+                
+                image = [UIImage imageWithData:data];
+                
+            } else {
+                error = [NSError errorWithDomain:nil code:0 userInfo:nil];
+            }
+        }
+        
+        // Вернуть результат через блок completionBlock
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if(completionBlock)
+                completionBlock(image, error);
+        });
+        
+    }];
+    
+    [task resume];
+
+}
 
 @end

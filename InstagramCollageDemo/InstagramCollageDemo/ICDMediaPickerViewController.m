@@ -19,6 +19,8 @@
 @interface ICDMediaPickerViewController()
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+
+@property (nonatomic, strong) ICDSessionTask *mediaSessionTask;
 @property (nonatomic, assign) BOOL viewHasBeenAppeared;
 @property (nonatomic, strong) NSArray *dataSource;
 
@@ -50,13 +52,20 @@
     self.viewHasBeenAppeared = YES;
 }
 
+- (void)viewDidUnload
+{
+    if(self.mediaSessionTask && self.mediaSessionTask.isRunning) {
+        [self.mediaSessionTask cancel];
+    }
+}
+
 #pragma mark - Networking
 
 - (void)fetchData
 {
     self.loading = YES;
     
-    [[ICDInstagramClient sharedInstance] fetchMediaWithUserIdentifier:self.userID completionBlock:^(ICDMedia *responseObject, NSError *error) {
+    self.mediaSessionTask = [[ICDInstagramClient sharedInstance] fetchMediaWithUserIdentifier:self.userID completionBlock:^(ICDMedia *responseObject, NSError *error) {
         
         self.loading = NO;
         
