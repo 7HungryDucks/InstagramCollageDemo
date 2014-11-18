@@ -11,6 +11,7 @@
 static NSString * const ICDUserNameKey = @"username";
 static NSString * const ICDUserFullNameKey = @"full_name";
 static NSString * const ICDUserIDKey = @"id";
+static NSString * const ICDUserProfilePictureKey = @"profile_picture";
 
 id ICDGetValueFromDictionary(NSDictionary *dictionary, NSString *key, Class type)
 {
@@ -38,6 +39,11 @@ id ICDGetValueFromDictionary(NSDictionary *dictionary, NSString *key, Class type
         self.name       = ICDGetValueFromDictionary(dictionary, ICDUserNameKey,     [NSString class]);
         self.fullName   = ICDGetValueFromDictionary(dictionary, ICDUserFullNameKey, [NSString class]);
         self.userID     = ICDGetValueFromDictionary(dictionary, ICDUserIDKey,       [NSString class]);
+        
+        NSString *profileURLString =  ICDGetValueFromDictionary(dictionary, ICDUserProfilePictureKey, [NSString class]);
+        if(profileURLString)
+            self.profilePictures = [NSURL URLWithString:profileURLString];
+        
     }
     return self;
 }

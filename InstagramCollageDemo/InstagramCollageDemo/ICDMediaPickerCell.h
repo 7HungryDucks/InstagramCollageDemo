@@ -11,5 +11,6 @@
 @interface ICDMediaPickerCell : UICollectionViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *mediaImageView;
+@property (nonatomic, strong) NSIndexPath *indexPath;
 
 @end

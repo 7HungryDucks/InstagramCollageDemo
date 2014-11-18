@@ -7,6 +7,7 @@
 //
 
 #import "ICDMediaPickerCell.h"
+#import "UIView+CustomProperty.h"
 
 @implementation ICDMediaPickerCell
 
@@ -24,6 +25,9 @@
     [super layoutSubviews];
     
     self.contentView.frame = self.bounds;
+    self.borderColor = self.isSelected ? [UIColor blueColor] : [UIColor whiteColor];
+    self.borderWidth = self.isSelected ? 5.0 : 0.0;
+
 }
 
 - (void)setSelected:(BOOL)selected

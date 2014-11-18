@@ -12,6 +12,9 @@
 
 @interface ICDSearchCell : UITableViewCell
 
+@property (nonatomic, strong) NSIndexPath *indexPath;
+@property (weak, nonatomic) IBOutlet UIImageView *profileImageView;
+
 - (void)configureWithUser:(ICDUser *)user;
 
 @end

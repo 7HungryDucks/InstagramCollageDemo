@@ -11,6 +11,7 @@
 #import "ICDUser.h"
 
 static NSString * const ICDMediaPickerViewControllerIdentifier = @"ICDMediaPickerViewController";
+static NSString * const ICDCollageViewControllerIdentifier = @"ICDCollageViewController";
 
 @implementation UIStoryboard (Segues)
 
@@ -22,6 +23,18 @@ static NSString * const ICDMediaPickerViewControllerIdentifier = @"ICDMediaPicke
     
     controller.title = user.fullName;
     controller.userID = user.userID;
+    
+    return controller;
+}
+
+- (ICDCollageViewController *)instantiateCollageViewControllerWithSelectedMedia:(NSArray *)media
+{
+    ICDCollageViewController *controller = [self instantiateViewControllerWithIdentifier:ICDCollageViewControllerIdentifier];
+    
+    NSAssert([controller isKindOfClass:[ICDCollageViewController class]], @"View controller must be kind of %@ class", NSStringFromClass([ICDCollageViewController class]));
+    
+    controller.title = NSLocalizedString(@"Preview", nil);
+    controller.selectedMedia = media;
     
     return controller;
 }

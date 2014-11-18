@@ -16,7 +16,7 @@
 #import "UIStoryboard+Segues.h"
 #import "UIViewController+Loading.h"
 
-@interface ICDMediaPickerViewController()
+@interface ICDMediaPickerViewController() <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
 
@@ -81,6 +81,16 @@
 
 - (IBAction)collageButtonTouch:(id)sender
 {
+    NSArray *selectedItem = [self.collectionView indexPathsForSelectedItems];
+    NSMutableArray *selectedPhotos = [NSMutableArray array];
+    
+    for(NSIndexPath *indexPath in selectedItem) {
+        [selectedPhotos addObject:self.dataSource[indexPath.row]];
+    }
+    
+    id controller = [self.storyboard instantiateCollageViewControllerWithSelectedMedia:selectedPhotos];
+    
+    [self.navigationController pushViewController:controller animated:YES];
 }
 
 #pragma mark - Collection view
@@ -98,9 +108,17 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     ICDMediaPickerCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
-    
+
     NSAssert([cell isKindOfClass:[ICDMediaPickerCell class]], @"Cell must be kind of %@ class", NSStringFromClass([ICDMediaPickerCell class]));
     
+    ICDMediaLink *mediaLink = self.dataSource[indexPath.row];
+    
+    cell.indexPath = indexPath;
+    [[ICDInstagramClient sharedInstance] imageWithURL:mediaLink.link withCompletionBlock:^(UIImage *image, NSError *error) {
+        
+        if([cell.indexPath isEqual:indexPath])
+            cell.mediaImageView.image = image;
+    }];
     
     return cell;
 }

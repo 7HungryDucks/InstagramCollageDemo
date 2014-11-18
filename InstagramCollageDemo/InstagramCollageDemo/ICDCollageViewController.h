@@ -1,5 +1,5 @@
 //
-//  ICDMediaPickerViewController.h
+//  ICDCollageViewController.h
 //  InstagramCollageDemo
 //
 //  Created by Yuri Kholod on 18.11.14.
@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ICDMediaPickerViewController : UIViewController
+@interface ICDCollageViewController : UIViewController
 
-@property (nonatomic, strong) NSString *userID;
+@property (nonatomic, strong) NSArray *selectedMedia;
 
 @end

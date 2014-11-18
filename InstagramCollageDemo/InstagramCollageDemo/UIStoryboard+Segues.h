@@ -7,11 +7,13 @@
 //
 
 #import "ICDMediaPickerViewController.h"
+#import "ICDCollageViewController.h"
 
 @class ICDUser;
 
 @interface UIStoryboard (Segues)
 
 - (ICDMediaPickerViewController *)instantiatePickerViewControllerWithUser:(ICDUser *)user;
+- (ICDCollageViewController *)instantiateCollageViewControllerWithSelectedMedia:(NSArray *)media;
 
 @end

@@ -62,6 +62,7 @@
                                 <connections>
                                     <outlet property="fullNameLabel" destination="sHE-zq-2gG" id="4a1-QY-Yzp"/>
                                     <outlet property="nameLabel" destination="VPv-1g-7I0" id="dOv-Nw-NS5"/>
+                                    <outlet property="profileImageView" destination="Ybu-HQ-fgf" id="UCg-qP-dTP"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -70,7 +71,7 @@
                             <outlet property="delegate" destination="Twq-XU-l9D" id="WJA-K2-SkE"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="tIv-Oi-FN6"/>
+                    <navigationItem key="navigationItem" title="Collage" id="tIv-Oi-FN6"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p1W-Mo-Yep" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -122,6 +123,10 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="Xd4-GF-KYy" id="KIi-fA-SSD"/>
+                                    <outlet property="delegate" destination="Xd4-GF-KYy" id="aim-Cn-pyl"/>
+                                </connections>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WDX-wt-xZh">
                                 <rect key="frame" x="211" y="562" width="178" height="30"/>
@@ -154,6 +159,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iu6-Rg-jdT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2316" y="280"/>
+        </scene>
+        <!--Collage View Controller-->
+        <scene sceneID="qyL-Dp-XYX">
+            <objects>
+                <viewController storyboardIdentifier="ICDCollageViewController" id="57S-Jj-lit" customClass="ICDCollageViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="b2p-OV-bLx"/>
+                        <viewControllerLayoutGuide type="bottom" id="INl-cb-4AQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0Au-eH-57Y">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PGO-jU-yiv">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="INl-cb-4AQ" firstAttribute="top" secondItem="PGO-jU-yiv" secondAttribute="bottom" id="Hhb-dE-RNu"/>
+                            <constraint firstItem="PGO-jU-yiv" firstAttribute="top" secondItem="b2p-OV-bLx" secondAttribute="bottom" constant="-20" id="bEj-KA-htO"/>
+                            <constraint firstItem="PGO-jU-yiv" firstAttribute="leading" secondItem="0Au-eH-57Y" secondAttribute="leadingMargin" constant="-16" id="csC-m6-wLX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PGO-jU-yiv" secondAttribute="trailing" constant="-16" id="pIj-ZH-dnq"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="X2Y-eN-Ja2">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="action" id="eaI-aN-7so">
+                            <connections>
+                                <action selector="sendButtonTouch:" destination="57S-Jj-lit" id="8g9-uH-GYp"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="previewImage" destination="PGO-jU-yiv" id="L70-LS-KCA"/>
+                        <outlet property="sendButton" destination="eaI-aN-7so" id="dIb-F8-XtH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uhc-tg-bjg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2994" y="280"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="VEy-Gr-Gfc">

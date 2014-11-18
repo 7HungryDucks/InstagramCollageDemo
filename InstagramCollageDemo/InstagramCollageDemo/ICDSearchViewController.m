@@ -70,6 +70,13 @@
     ICDUser *user = self.users[indexPath.row];
     
     [cell configureWithUser:user];
+    cell.indexPath = indexPath;
+    
+    [[ICDInstagramClient sharedInstance] imageWithURL:user.profilePictures withCompletionBlock:^(UIImage *image, NSError *error) {
+        
+        if([cell.indexPath isEqual:indexPath])
+            cell.profileImageView.image = image;
+    }];
     
     return cell;
 }

@@ -18,6 +18,8 @@
 
 @implementation ICDSearchCell
 
+#pragma mark - Laying Out
+
 - (void)configureWithUser:(ICDUser *)user
 {
     self.fullNameLabel.text = user.fullName;
