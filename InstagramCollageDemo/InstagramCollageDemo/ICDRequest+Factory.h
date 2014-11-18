@@ -16,4 +16,10 @@
 
 + (instancetype)searchUserRequestWithText:(NSString *)text clientIdentifier:(NSString *)clientID;
 
+/**
+ Получить список ресурсов пользователя по его ID
+ */
+
++ (instancetype)fetchMediaRequestWithUserIdentifier:(NSString *)userID clientIdentifier:(NSString *)clientID;
+
 @end

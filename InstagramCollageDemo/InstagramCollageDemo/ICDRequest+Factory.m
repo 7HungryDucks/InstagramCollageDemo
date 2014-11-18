@@ -9,8 +9,10 @@
 #import "ICDRequest+Factory.h"
 
 #import "ICDUsers.h"
+#import "ICDMedia.h"
 
 static NSString * const searchUserEndpoint = @"users/search?q=%@&client_id=%@";
+static NSString * const userMediaEndpoint = @"users/%@/media/recent/?client_id=%@";
 
 @implementation ICDRequest (Factory)
 
@@ -18,6 +20,14 @@ static NSString * const searchUserEndpoint = @"users/search?q=%@&client_id=%@";
 {
     ICDRequest *request = [ICDRequest requestWithResource:[NSString stringWithFormat:searchUserEndpoint, text, clientID]
                                       responseClass:[ICDUsers class]];
+    
+    return request;
+}
+
++ (instancetype)fetchMediaRequestWithUserIdentifier:(NSString *)userID clientIdentifier:(NSString *)clientID
+{
+    ICDRequest *request = [ICDRequest requestWithResource:[NSString stringWithFormat:userMediaEndpoint, userID, clientID]
+                                            responseClass:[ICDMedia class]];
     
     return request;
 }

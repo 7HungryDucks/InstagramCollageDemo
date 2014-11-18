@@ -24,4 +24,13 @@ extern NSString * const ICDInstagramAPIClientID;
 
 - (ICDSessionTask *)searchUserWithText:(NSString *)text completionBlock:(ICDRequestCompletionBlock)completionBlock;
 
+/**
+ Получить список ресурсов пользователя
+ 
+ @param userID ID пользователя.
+ @param completionBlock Блок выполняемый после завершения операции
+ */
+
+- (ICDSessionTask *)fetchMediaWithUserIdentifier:(NSString *)userID completionBlock:(ICDRequestCompletionBlock)completionBlock;
+
 @end

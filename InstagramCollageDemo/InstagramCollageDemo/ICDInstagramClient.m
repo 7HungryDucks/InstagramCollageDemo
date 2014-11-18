@@ -41,4 +41,12 @@ NSString * const ICDInstagramAPIClientID = @"5609d2fb2bf74d749716bd00a9090e5e";
     return [self performRequest:request];
 }
 
+- (ICDSessionTask *)fetchMediaWithUserIdentifier:(NSString *)userID completionBlock:(ICDRequestCompletionBlock)completionBlock
+{
+    ICDRequest *request = [ICDRequest fetchMediaRequestWithUserIdentifier:userID clientIdentifier:ICDInstagramAPIClientID];
+    request.complettionBlock = completionBlock;
+    
+    return [self performRequest:request];
+}
+
 @end

@@ -9,6 +9,13 @@
 #import "ICDMediaPickerViewController.h"
 #import "ICDMediaPickerCell.h"
 
+#import "ICDInstagramClient.h"
+#import "ICDMedia.h"
+#import "ICDMediaLink.h"
+
+#import "UIStoryboard+Segues.h"
+#import "UIViewController+Loading.h"
+
 @interface ICDMediaPickerViewController()
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
@@ -47,7 +54,24 @@
 
 - (void)fetchData
 {
+    self.loading = YES;
     
+    [[ICDInstagramClient sharedInstance] fetchMediaWithUserIdentifier:self.userID completionBlock:^(ICDMedia *responseObject, NSError *error) {
+        
+        self.loading = NO;
+        
+        if(!error && responseObject.media.count > 0) {
+            
+            self.dataSource = responseObject.media;
+            [self.collectionView reloadData];
+        }
+    }];
+}
+
+#pragma mark - Action 
+
+- (IBAction)collageButtonTouch:(id)sender
+{
 }
 
 #pragma mark - Collection view
