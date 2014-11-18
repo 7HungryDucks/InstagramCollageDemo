@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		7EF4CC371A1B609700BFC7B8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF4CC361A1B609700BFC7B8 /* main.m */; };
 		7EF4CC3A1A1B609700BFC7B8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF4CC391A1B609700BFC7B8 /* AppDelegate.m */; };
-		7EF4CC3D1A1B609700BFC7B8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF4CC3C1A1B609700BFC7B8 /* ViewController.m */; };
 		7EF4CC401A1B609700BFC7B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EF4CC3E1A1B609700BFC7B8 /* Main.storyboard */; };
 		7EF4CC421A1B609700BFC7B8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EF4CC411A1B609700BFC7B8 /* Images.xcassets */; };
 		7EF4CC451A1B609700BFC7B8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EF4CC431A1B609700BFC7B8 /* LaunchScreen.xib */; };
@@ -18,6 +17,9 @@
 		7EF4CC611A1B61E400BFC7B8 /* ICDSessionTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF4CC601A1B61E400BFC7B8 /* ICDSessionTask.m */; };
 		7EF4CC671A1B631000BFC7B8 /* ICDRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF4CC661A1B631000BFC7B8 /* ICDRequest.m */; };
 		7EF4CC6F1A1B66AC00BFC7B8 /* ICDInstagramClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF4CC6E1A1B66AC00BFC7B8 /* ICDInstagramClient.m */; };
+		7EF4CC721A1B67EA00BFC7B8 /* ICDRequest+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF4CC711A1B67EA00BFC7B8 /* ICDRequest+Factory.m */; };
+		7EF4CC761A1B68B600BFC7B8 /* ICDUsers.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF4CC751A1B68B600BFC7B8 /* ICDUsers.m */; };
+		7EF4CC791A1B68C300BFC7B8 /* ICDUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF4CC781A1B68C300BFC7B8 /* ICDUser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +38,6 @@
 		7EF4CC361A1B609700BFC7B8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7EF4CC381A1B609700BFC7B8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7EF4CC391A1B609700BFC7B8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		7EF4CC3B1A1B609700BFC7B8 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		7EF4CC3C1A1B609700BFC7B8 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		7EF4CC3F1A1B609700BFC7B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7EF4CC411A1B609700BFC7B8 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		7EF4CC441A1B609700BFC7B8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -53,6 +53,12 @@
 		7EF4CC681A1B638200BFC7B8 /* ICDResponseProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICDResponseProtocol.h; sourceTree = "<group>"; };
 		7EF4CC6D1A1B66AC00BFC7B8 /* ICDInstagramClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICDInstagramClient.h; sourceTree = "<group>"; };
 		7EF4CC6E1A1B66AC00BFC7B8 /* ICDInstagramClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICDInstagramClient.m; sourceTree = "<group>"; };
+		7EF4CC701A1B67EA00BFC7B8 /* ICDRequest+Factory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ICDRequest+Factory.h"; sourceTree = "<group>"; };
+		7EF4CC711A1B67EA00BFC7B8 /* ICDRequest+Factory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ICDRequest+Factory.m"; sourceTree = "<group>"; };
+		7EF4CC741A1B68B600BFC7B8 /* ICDUsers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICDUsers.h; sourceTree = "<group>"; };
+		7EF4CC751A1B68B600BFC7B8 /* ICDUsers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICDUsers.m; sourceTree = "<group>"; };
+		7EF4CC771A1B68C300BFC7B8 /* ICDUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICDUser.h; sourceTree = "<group>"; };
+		7EF4CC781A1B68C300BFC7B8 /* ICDUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICDUser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,10 +101,9 @@
 			isa = PBXGroup;
 			children = (
 				7EF4CC5A1A1B610600BFC7B8 /* Networking */,
+				7EF4CC731A1B688300BFC7B8 /* Model */,
 				7EF4CC381A1B609700BFC7B8 /* AppDelegate.h */,
 				7EF4CC391A1B609700BFC7B8 /* AppDelegate.m */,
-				7EF4CC3B1A1B609700BFC7B8 /* ViewController.h */,
-				7EF4CC3C1A1B609700BFC7B8 /* ViewController.m */,
 				7EF4CC3E1A1B609700BFC7B8 /* Main.storyboard */,
 				7EF4CC411A1B609700BFC7B8 /* Images.xcassets */,
 				7EF4CC431A1B609700BFC7B8 /* LaunchScreen.xib */,
@@ -159,10 +164,23 @@
 		7EF4CC691A1B667400BFC7B8 /* Instagram */ = {
 			isa = PBXGroup;
 			children = (
+				7EF4CC701A1B67EA00BFC7B8 /* ICDRequest+Factory.h */,
+				7EF4CC711A1B67EA00BFC7B8 /* ICDRequest+Factory.m */,
 				7EF4CC6D1A1B66AC00BFC7B8 /* ICDInstagramClient.h */,
 				7EF4CC6E1A1B66AC00BFC7B8 /* ICDInstagramClient.m */,
 			);
 			name = Instagram;
+			sourceTree = "<group>";
+		};
+		7EF4CC731A1B688300BFC7B8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7EF4CC741A1B68B600BFC7B8 /* ICDUsers.h */,
+				7EF4CC751A1B68B600BFC7B8 /* ICDUsers.m */,
+				7EF4CC771A1B68C300BFC7B8 /* ICDUser.h */,
+				7EF4CC781A1B68C300BFC7B8 /* ICDUser.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,11 +285,13 @@
 			files = (
 				7EF4CC671A1B631000BFC7B8 /* ICDRequest.m in Sources */,
 				7EF4CC6F1A1B66AC00BFC7B8 /* ICDInstagramClient.m in Sources */,
-				7EF4CC3D1A1B609700BFC7B8 /* ViewController.m in Sources */,
+				7EF4CC721A1B67EA00BFC7B8 /* ICDRequest+Factory.m in Sources */,
 				7EF4CC5E1A1B614C00BFC7B8 /* ICDHTTPSessionManager.m in Sources */,
 				7EF4CC3A1A1B609700BFC7B8 /* AppDelegate.m in Sources */,
 				7EF4CC611A1B61E400BFC7B8 /* ICDSessionTask.m in Sources */,
+				7EF4CC791A1B68C300BFC7B8 /* ICDUser.m in Sources */,
 				7EF4CC371A1B609700BFC7B8 /* main.m in Sources */,
+				7EF4CC761A1B68B600BFC7B8 /* ICDUsers.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

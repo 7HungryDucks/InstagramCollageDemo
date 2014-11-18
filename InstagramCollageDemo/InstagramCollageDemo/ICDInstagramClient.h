@@ -15,4 +15,13 @@ extern NSString * const ICDInstagramAPIClientID;
 
 + (instancetype)sharedInstance;
 
+/**
+ Поиск пользователя по тексту 
+ 
+ @param text Текст запроса.
+ @param completionBlock Блок выполняемый после завершения операции
+ */
+
+- (ICDSessionTask *)searchUserWithText:(NSString *)text completionBlock:(ICDRequestCompletionBlock)completionBlock;
+
 @end

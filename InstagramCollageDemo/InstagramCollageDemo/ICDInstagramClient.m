@@ -7,6 +7,7 @@
 //
 
 #import "ICDInstagramClient.h"
+#import "ICDRequest+Factory.h"
 
 NSString * const ICDInstagramAPIBaseURLString = @"https://api.instagram.com/v1/";
 NSString * const ICDInstagramAPIClientID = @"5609d2fb2bf74d749716bd00a9090e5e";
@@ -14,6 +15,7 @@ NSString * const ICDInstagramAPIClientID = @"5609d2fb2bf74d749716bd00a9090e5e";
 @implementation ICDInstagramClient
 
 #pragma mark - Initialization
+
 + (instancetype)sharedInstance
 {
     static dispatch_once_t onceToken;
@@ -27,6 +29,16 @@ NSString * const ICDInstagramAPIClientID = @"5609d2fb2bf74d749716bd00a9090e5e";
     });
     
     return instance;
+}
+
+#pragma mark - Public methods
+
+- (ICDSessionTask *)searchUserWithText:(NSString *)text completionBlock:(ICDRequestCompletionBlock)completionBlock
+{
+    ICDRequest *request = [ICDRequest searchUserRequestWithText:text clientIdentifier:ICDInstagramAPIClientID];
+    request.complettionBlock = completionBlock;
+    
+    return [self performRequest:request];
 }
 
 @end
