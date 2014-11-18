@@ -49,6 +49,7 @@
 		7EF4CC601A1B61E400BFC7B8 /* ICDSessionTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICDSessionTask.m; sourceTree = "<group>"; };
 		7EF4CC651A1B631000BFC7B8 /* ICDRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICDRequest.h; sourceTree = "<group>"; };
 		7EF4CC661A1B631000BFC7B8 /* ICDRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICDRequest.m; sourceTree = "<group>"; };
+		7EF4CC681A1B638200BFC7B8 /* ICDResponseProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICDResponseProtocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +147,7 @@
 				7EF4CC601A1B61E400BFC7B8 /* ICDSessionTask.m */,
 				7EF4CC651A1B631000BFC7B8 /* ICDRequest.h */,
 				7EF4CC661A1B631000BFC7B8 /* ICDRequest.m */,
+				7EF4CC681A1B638200BFC7B8 /* ICDResponseProtocol.h */,
 			);
 			name = Base;
 			sourceTree = "<group>";
