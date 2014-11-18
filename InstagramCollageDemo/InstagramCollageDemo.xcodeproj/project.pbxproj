@@ -20,6 +20,13 @@
 		7EF4CC721A1B67EA00BFC7B8 /* ICDRequest+Factory.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF4CC711A1B67EA00BFC7B8 /* ICDRequest+Factory.m */; };
 		7EF4CC761A1B68B600BFC7B8 /* ICDUsers.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF4CC751A1B68B600BFC7B8 /* ICDUsers.m */; };
 		7EF4CC791A1B68C300BFC7B8 /* ICDUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF4CC781A1B68C300BFC7B8 /* ICDUser.m */; };
+		7EF4CC7D1A1B6D1E00BFC7B8 /* ICDSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF4CC7C1A1B6D1E00BFC7B8 /* ICDSearchViewController.m */; };
+		7EF4CC811A1B716B00BFC7B8 /* ICDSearchCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF4CC801A1B716B00BFC7B8 /* ICDSearchCell.m */; };
+		7EF4CC851A1B75A200BFC7B8 /* UIStoryboard+Segues.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF4CC841A1B75A200BFC7B8 /* UIStoryboard+Segues.m */; };
+		7EF4CC881A1B75E300BFC7B8 /* ICDLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF4CC871A1B75E300BFC7B8 /* ICDLoadingView.m */; };
+		7EF4CC8B1A1B774600BFC7B8 /* UIViewController+Loading.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF4CC8A1A1B774600BFC7B8 /* UIViewController+Loading.m */; };
+		7EF4CC8E1A1B79A200BFC7B8 /* ICDMediaPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF4CC8D1A1B79A200BFC7B8 /* ICDMediaPickerViewController.m */; };
+		7EF4CC911A1B839600BFC7B8 /* ICDMediaPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF4CC901A1B839600BFC7B8 /* ICDMediaPickerCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +66,20 @@
 		7EF4CC751A1B68B600BFC7B8 /* ICDUsers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICDUsers.m; sourceTree = "<group>"; };
 		7EF4CC771A1B68C300BFC7B8 /* ICDUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICDUser.h; sourceTree = "<group>"; };
 		7EF4CC781A1B68C300BFC7B8 /* ICDUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICDUser.m; sourceTree = "<group>"; };
+		7EF4CC7B1A1B6D1E00BFC7B8 /* ICDSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICDSearchViewController.h; sourceTree = "<group>"; };
+		7EF4CC7C1A1B6D1E00BFC7B8 /* ICDSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICDSearchViewController.m; sourceTree = "<group>"; };
+		7EF4CC7F1A1B716B00BFC7B8 /* ICDSearchCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICDSearchCell.h; sourceTree = "<group>"; };
+		7EF4CC801A1B716B00BFC7B8 /* ICDSearchCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICDSearchCell.m; sourceTree = "<group>"; };
+		7EF4CC831A1B75A200BFC7B8 /* UIStoryboard+Segues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIStoryboard+Segues.h"; sourceTree = "<group>"; };
+		7EF4CC841A1B75A200BFC7B8 /* UIStoryboard+Segues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIStoryboard+Segues.m"; sourceTree = "<group>"; };
+		7EF4CC861A1B75E300BFC7B8 /* ICDLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICDLoadingView.h; sourceTree = "<group>"; };
+		7EF4CC871A1B75E300BFC7B8 /* ICDLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICDLoadingView.m; sourceTree = "<group>"; };
+		7EF4CC891A1B774600BFC7B8 /* UIViewController+Loading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Loading.h"; sourceTree = "<group>"; };
+		7EF4CC8A1A1B774600BFC7B8 /* UIViewController+Loading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Loading.m"; sourceTree = "<group>"; };
+		7EF4CC8C1A1B79A200BFC7B8 /* ICDMediaPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICDMediaPickerViewController.h; sourceTree = "<group>"; };
+		7EF4CC8D1A1B79A200BFC7B8 /* ICDMediaPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICDMediaPickerViewController.m; sourceTree = "<group>"; };
+		7EF4CC8F1A1B839600BFC7B8 /* ICDMediaPickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICDMediaPickerCell.h; sourceTree = "<group>"; };
+		7EF4CC901A1B839600BFC7B8 /* ICDMediaPickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICDMediaPickerCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +121,9 @@
 		7EF4CC331A1B609700BFC7B8 /* InstagramCollageDemo */ = {
 			isa = PBXGroup;
 			children = (
+				7EF4CC821A1B757900BFC7B8 /* Categories */,
+				7EF4CC7E1A1B70F500BFC7B8 /* Views */,
+				7EF4CC7A1A1B6D0200BFC7B8 /* Controllers */,
 				7EF4CC5A1A1B610600BFC7B8 /* Networking */,
 				7EF4CC731A1B688300BFC7B8 /* Model */,
 				7EF4CC381A1B609700BFC7B8 /* AppDelegate.h */,
@@ -181,6 +205,41 @@
 				7EF4CC781A1B68C300BFC7B8 /* ICDUser.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		7EF4CC7A1A1B6D0200BFC7B8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				7EF4CC7B1A1B6D1E00BFC7B8 /* ICDSearchViewController.h */,
+				7EF4CC7C1A1B6D1E00BFC7B8 /* ICDSearchViewController.m */,
+				7EF4CC8C1A1B79A200BFC7B8 /* ICDMediaPickerViewController.h */,
+				7EF4CC8D1A1B79A200BFC7B8 /* ICDMediaPickerViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		7EF4CC7E1A1B70F500BFC7B8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7EF4CC7F1A1B716B00BFC7B8 /* ICDSearchCell.h */,
+				7EF4CC801A1B716B00BFC7B8 /* ICDSearchCell.m */,
+				7EF4CC8F1A1B839600BFC7B8 /* ICDMediaPickerCell.h */,
+				7EF4CC901A1B839600BFC7B8 /* ICDMediaPickerCell.m */,
+				7EF4CC861A1B75E300BFC7B8 /* ICDLoadingView.h */,
+				7EF4CC871A1B75E300BFC7B8 /* ICDLoadingView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		7EF4CC821A1B757900BFC7B8 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				7EF4CC831A1B75A200BFC7B8 /* UIStoryboard+Segues.h */,
+				7EF4CC841A1B75A200BFC7B8 /* UIStoryboard+Segues.m */,
+				7EF4CC891A1B774600BFC7B8 /* UIViewController+Loading.h */,
+				7EF4CC8A1A1B774600BFC7B8 /* UIViewController+Loading.m */,
+			);
+			name = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,13 +342,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EF4CC881A1B75E300BFC7B8 /* ICDLoadingView.m in Sources */,
+				7EF4CC8B1A1B774600BFC7B8 /* UIViewController+Loading.m in Sources */,
 				7EF4CC671A1B631000BFC7B8 /* ICDRequest.m in Sources */,
 				7EF4CC6F1A1B66AC00BFC7B8 /* ICDInstagramClient.m in Sources */,
+				7EF4CC851A1B75A200BFC7B8 /* UIStoryboard+Segues.m in Sources */,
 				7EF4CC721A1B67EA00BFC7B8 /* ICDRequest+Factory.m in Sources */,
 				7EF4CC5E1A1B614C00BFC7B8 /* ICDHTTPSessionManager.m in Sources */,
 				7EF4CC3A1A1B609700BFC7B8 /* AppDelegate.m in Sources */,
+				7EF4CC7D1A1B6D1E00BFC7B8 /* ICDSearchViewController.m in Sources */,
 				7EF4CC611A1B61E400BFC7B8 /* ICDSessionTask.m in Sources */,
+				7EF4CC8E1A1B79A200BFC7B8 /* ICDMediaPickerViewController.m in Sources */,
+				7EF4CC811A1B716B00BFC7B8 /* ICDSearchCell.m in Sources */,
 				7EF4CC791A1B68C300BFC7B8 /* ICDUser.m in Sources */,
+				7EF4CC911A1B839600BFC7B8 /* ICDMediaPickerCell.m in Sources */,
 				7EF4CC371A1B609700BFC7B8 /* main.m in Sources */,
 				7EF4CC761A1B68B600BFC7B8 /* ICDUsers.m in Sources */,
 			);
@@ -482,6 +548,7 @@
 				7EF4CC561A1B609800BFC7B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7EF4CC571A1B609800BFC7B8 /* Build configuration list for PBXNativeTarget "InstagramCollageDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +557,7 @@
 				7EF4CC591A1B609800BFC7B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
