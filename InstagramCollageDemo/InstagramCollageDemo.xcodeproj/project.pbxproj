@@ -14,6 +14,7 @@
 		7EF4CC421A1B609700BFC7B8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EF4CC411A1B609700BFC7B8 /* Images.xcassets */; };
 		7EF4CC451A1B609700BFC7B8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7EF4CC431A1B609700BFC7B8 /* LaunchScreen.xib */; };
 		7EF4CC511A1B609800BFC7B8 /* InstagramCollageDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF4CC501A1B609800BFC7B8 /* InstagramCollageDemoTests.m */; };
+		7EF4CC5E1A1B614C00BFC7B8 /* ICDHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF4CC5D1A1B614C00BFC7B8 /* ICDHTTPSessionManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		7EF4CC4A1A1B609800BFC7B8 /* InstagramCollageDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InstagramCollageDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EF4CC4F1A1B609800BFC7B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7EF4CC501A1B609800BFC7B8 /* InstagramCollageDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InstagramCollageDemoTests.m; sourceTree = "<group>"; };
+		7EF4CC5C1A1B614C00BFC7B8 /* ICDHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICDHTTPSessionManager.h; sourceTree = "<group>"; };
+		7EF4CC5D1A1B614C00BFC7B8 /* ICDHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICDHTTPSessionManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +84,7 @@
 		7EF4CC331A1B609700BFC7B8 /* InstagramCollageDemo */ = {
 			isa = PBXGroup;
 			children = (
+				7EF4CC5A1A1B610600BFC7B8 /* Networking */,
 				7EF4CC381A1B609700BFC7B8 /* AppDelegate.h */,
 				7EF4CC391A1B609700BFC7B8 /* AppDelegate.m */,
 				7EF4CC3B1A1B609700BFC7B8 /* ViewController.h */,
@@ -117,6 +121,23 @@
 				7EF4CC4F1A1B609800BFC7B8 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7EF4CC5A1A1B610600BFC7B8 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				7EF4CC5B1A1B611000BFC7B8 /* Base */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		7EF4CC5B1A1B611000BFC7B8 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				7EF4CC5C1A1B614C00BFC7B8 /* ICDHTTPSessionManager.h */,
+				7EF4CC5D1A1B614C00BFC7B8 /* ICDHTTPSessionManager.m */,
+			);
+			name = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,6 +241,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7EF4CC3D1A1B609700BFC7B8 /* ViewController.m in Sources */,
+				7EF4CC5E1A1B614C00BFC7B8 /* ICDHTTPSessionManager.m in Sources */,
 				7EF4CC3A1A1B609700BFC7B8 /* AppDelegate.m in Sources */,
 				7EF4CC371A1B609700BFC7B8 /* main.m in Sources */,
 			);
