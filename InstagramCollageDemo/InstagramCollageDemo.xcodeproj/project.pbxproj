@@ -16,6 +16,7 @@
 		7EF4CC511A1B609800BFC7B8 /* InstagramCollageDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF4CC501A1B609800BFC7B8 /* InstagramCollageDemoTests.m */; };
 		7EF4CC5E1A1B614C00BFC7B8 /* ICDHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF4CC5D1A1B614C00BFC7B8 /* ICDHTTPSessionManager.m */; };
 		7EF4CC611A1B61E400BFC7B8 /* ICDSessionTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF4CC601A1B61E400BFC7B8 /* ICDSessionTask.m */; };
+		7EF4CC671A1B631000BFC7B8 /* ICDRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF4CC661A1B631000BFC7B8 /* ICDRequest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,8 @@
 		7EF4CC5D1A1B614C00BFC7B8 /* ICDHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICDHTTPSessionManager.m; sourceTree = "<group>"; };
 		7EF4CC5F1A1B61E400BFC7B8 /* ICDSessionTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICDSessionTask.h; sourceTree = "<group>"; };
 		7EF4CC601A1B61E400BFC7B8 /* ICDSessionTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICDSessionTask.m; sourceTree = "<group>"; };
+		7EF4CC651A1B631000BFC7B8 /* ICDRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICDRequest.h; sourceTree = "<group>"; };
+		7EF4CC661A1B631000BFC7B8 /* ICDRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICDRequest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +144,8 @@
 				7EF4CC5D1A1B614C00BFC7B8 /* ICDHTTPSessionManager.m */,
 				7EF4CC5F1A1B61E400BFC7B8 /* ICDSessionTask.h */,
 				7EF4CC601A1B61E400BFC7B8 /* ICDSessionTask.m */,
+				7EF4CC651A1B631000BFC7B8 /* ICDRequest.h */,
+				7EF4CC661A1B631000BFC7B8 /* ICDRequest.m */,
 			);
 			name = Base;
 			sourceTree = "<group>";
@@ -245,6 +250,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EF4CC671A1B631000BFC7B8 /* ICDRequest.m in Sources */,
 				7EF4CC3D1A1B609700BFC7B8 /* ViewController.m in Sources */,
 				7EF4CC5E1A1B614C00BFC7B8 /* ICDHTTPSessionManager.m in Sources */,
 				7EF4CC3A1A1B609700BFC7B8 /* AppDelegate.m in Sources */,
