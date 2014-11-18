@@ -34,11 +34,14 @@ UIImage * collageWithSize(NSInteger size, NSArray *images)
         
         
         //create a rect with the size we want to crop the image to
-        //        CGRect clippedRect = CGRectMake(i*columnWidth, 0, columnWidth, size);
-        //        CGContextClipToRect(currentContext, clippedRect);
+        CGRect clippedRect = CGRectMake(i * columnWidth, 0, size, size);
+        CGContextClipToRect(currentContext, clippedRect);
         
         //create a rect equivalent to the full size of the image
-        CGRect drawRect = CGRectMake(i*columnWidth, 0, image.size.width, image.size.height);
+        CGRect drawRect = CGRectMake(i * columnWidth, 0, image.size.width, image.size.height);
+        
+        CGContextTranslateCTM(currentContext, 0.0, size);
+        CGContextScaleCTM(currentContext, 1.0, -1.0);
         
         //draw the image to our clipped context using our offset rect
         CGContextDrawImage(currentContext, drawRect, image.CGImage);
