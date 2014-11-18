@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E2829931A1BAE0E00AEEB76 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7E2829921A1BAE0E00AEEB76 /* Localizable.strings */; };
 		7EF4CC371A1B609700BFC7B8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF4CC361A1B609700BFC7B8 /* main.m */; };
 		7EF4CC3A1A1B609700BFC7B8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF4CC391A1B609700BFC7B8 /* AppDelegate.m */; };
 		7EF4CC401A1B609700BFC7B8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EF4CC3E1A1B609700BFC7B8 /* Main.storyboard */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7E2829921A1BAE0E00AEEB76 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		7EF4CC311A1B609700BFC7B8 /* InstagramCollageDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstagramCollageDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EF4CC351A1B609700BFC7B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7EF4CC361A1B609700BFC7B8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 			children = (
 				7EF4CC351A1B609700BFC7B8 /* Info.plist */,
 				7EF4CC361A1B609700BFC7B8 /* main.m */,
+				7E2829921A1BAE0E00AEEB76 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -343,6 +346,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7EF4CC401A1B609700BFC7B8 /* Main.storyboard in Resources */,
+				7E2829931A1BAE0E00AEEB76 /* Localizable.strings in Resources */,
 				7EF4CC451A1B609700BFC7B8 /* LaunchScreen.xib in Resources */,
 				7EF4CC421A1B609700BFC7B8 /* Images.xcassets in Resources */,
 			);

@@ -16,46 +16,7 @@
 #import "UIViewController+Loading.h"
 
 
-UIImage * collageWithSize(NSInteger size, NSArray *images)
-{
-    NSMutableArray *selectedImages = [NSMutableArray array];
-    [selectedImages addObjectsFromArray:images];
-    
-    // use the selectedImages for generating the thumbnail
-    float columnWidth = (float)size/(float)[selectedImages count];
-    
-    //create a context to do our clipping in
-    UIGraphicsBeginImageContext(CGSizeMake(size, size));
-    CGContextRef currentContext = UIGraphicsGetCurrentContext();
-    
-    for (int i = 0; i < [selectedImages count]; i++) {
-        // get the current image
-        UIImage *image = [selectedImages objectAtIndex:i];
-        
-        
-        //create a rect with the size we want to crop the image to
-        CGRect clippedRect = CGRectMake(i * columnWidth, 0, size, size);
-        CGContextClipToRect(currentContext, clippedRect);
-        
-        //create a rect equivalent to the full size of the image
-        CGRect drawRect = CGRectMake(i * columnWidth, 0, image.size.width, image.size.height);
-        
-        CGContextTranslateCTM(currentContext, 0.0, size);
-        CGContextScaleCTM(currentContext, 1.0, -1.0);
-        
-        //draw the image to our clipped context using our offset rect
-        CGContextDrawImage(currentContext, drawRect, image.CGImage);
-    }
-    
-    //pull the image from our cropped context
-    UIImage *collage = UIGraphicsGetImageFromCurrentImageContext();
-    
-    //pop the context to get back to the default
-    UIGraphicsEndImageContext();
-    
-    //Note: this is autoreleased
-    return collage;
-}
+UIImage * collageWithSize(NSInteger size, NSArray *images);
 
 @interface ICDCollageViewController() <MFMailComposeViewControllerDelegate>
 
@@ -100,18 +61,25 @@ UIImage * collageWithSize(NSInteger size, NSArray *images)
     if(!self.selectedMedia.count)
         return;
     
-    self.loading = YES;
+    self.icd_loading = YES;
+    
+    __weak typeof(self) weakSelf = self;
     
     for(ICDMediaLink *media in self.selectedMedia) {
         
         [[ICDInstagramClient sharedInstance] imageWithURL:media.link withCompletionBlock:^(UIImage *image, NSError *error) {
             
-            [self.images addObject:image];
+            __strong typeof(weakSelf) strongSelf = weakSelf;
             
-            if(self.images.count == self.selectedMedia.count) {
-                self.loading = NO;
-                self.sendButton.enabled = YES;
-                self.previewImage.image = collageWithSize(CGRectGetHeight(self.view.frame), self.images);
+            if(!strongSelf)
+                return;
+            
+            [strongSelf.images addObject:image];
+            
+            if(strongSelf.images.count == strongSelf.selectedMedia.count) {
+                strongSelf.icd_loading = NO;
+                strongSelf.sendButton.enabled = YES;
+                strongSelf.previewImage.image = collageWithSize(CGRectGetHeight(strongSelf.view.frame), self.images);
             }
         }];
     }
@@ -140,5 +108,45 @@ UIImage * collageWithSize(NSInteger size, NSArray *images)
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-
 @end
+
+UIImage * collageWithSize(NSInteger size, NSArray *images)
+{
+    NSMutableArray *selectedImages = [NSMutableArray array];
+    [selectedImages addObjectsFromArray:images];
+    
+    // use the selectedImages for generating the thumbnail
+    float columnWidth = (float)size/(float)[selectedImages count];
+    
+    //create a context to do our clipping in
+    UIGraphicsBeginImageContext(CGSizeMake(size, size));
+    CGContextRef currentContext = UIGraphicsGetCurrentContext();
+    
+    for (int i = 0; i < [selectedImages count]; i++) {
+        // get the current image
+        UIImage *image = [selectedImages objectAtIndex:i];
+        
+        
+        //create a rect with the size we want to crop the image to
+        CGRect clippedRect = CGRectMake(i * columnWidth, 0, size, size);
+        CGContextClipToRect(currentContext, clippedRect);
+        
+        //create a rect equivalent to the full size of the image
+        CGRect drawRect = CGRectMake(i * columnWidth, 0, image.size.width, image.size.height);
+        
+        CGContextTranslateCTM(currentContext, 0.0, size);
+        CGContextScaleCTM(currentContext, 1.0, -1.0);
+        
+        //draw the image to our clipped context using our offset rect
+        CGContextDrawImage(currentContext, drawRect, image.CGImage);
+    }
+    
+    //pull the image from our cropped context
+    UIImage *collage = UIGraphicsGetImageFromCurrentImageContext();
+    
+    //pop the context to get back to the default
+    UIGraphicsEndImageContext();
+    
+    //Note: this is autoreleased
+    return collage;
+}

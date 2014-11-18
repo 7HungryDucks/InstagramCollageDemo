@@ -10,9 +10,9 @@
 
 @interface UIViewController (Loading)
 
-@property (nonatomic, assign) BOOL loading;
+@property (nonatomic, assign) BOOL icd_loading;
 
-- (void)startLoading;
-- (void)finishLoading;
+- (void)icd_startLoading;
+- (void)icd_finishLoading;
 
 @end

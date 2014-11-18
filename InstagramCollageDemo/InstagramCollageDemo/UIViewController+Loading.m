@@ -13,7 +13,7 @@ static NSInteger const ICDLoadingViewTag = 0xfff;
 
 @implementation UIViewController (Loading)
 
-- (void)startLoading
+- (void)icd_startLoading
 {
     ICDLoadingView *loadingView = [self loadingView];
     if (!loadingView) {
@@ -30,7 +30,7 @@ static NSInteger const ICDLoadingViewTag = 0xfff;
     } completion:nil];
 }
 
-- (void)finishLoading
+- (void)icd_finishLoading
 {
     ICDLoadingView *loadingView = [self loadingView];
     if (!loadingView) {
@@ -66,16 +66,16 @@ static NSInteger const ICDLoadingViewTag = 0xfff;
     return loadingView;
 }
 
-- (void)setLoading:(BOOL)loading
+- (void)setIcd_loading:(BOOL)loading
 {
     if(loading) {
-        [self startLoading];
+        [self icd_startLoading];
     } else {
-        [self finishLoading];
+        [self icd_finishLoading];
     }
 }
 
-- (BOOL)loading
+- (BOOL)icd_loading
 {
     return [self loadingView] != nil;
 }

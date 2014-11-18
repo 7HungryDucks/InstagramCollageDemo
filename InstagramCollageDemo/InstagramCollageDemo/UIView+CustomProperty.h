@@ -10,8 +10,8 @@
 
 @interface UIView (CustomProperty)
 
-@property (nonatomic, assign) CGFloat cornerRadius;
-@property (nonatomic, assign) CGFloat borderWidth;
-@property (nonatomic, strong) UIColor *borderColor;
+@property (nonatomic, assign) CGFloat icd_cornerRadius;
+@property (nonatomic, assign) CGFloat icd_borderWidth;
+@property (nonatomic, strong) UIColor *icd_borderColor;
 
 @end

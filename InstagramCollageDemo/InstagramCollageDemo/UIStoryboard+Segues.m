@@ -15,7 +15,7 @@ static NSString * const ICDCollageViewControllerIdentifier = @"ICDCollageViewCon
 
 @implementation UIStoryboard (Segues)
 
-- (ICDMediaPickerViewController *)instantiatePickerViewControllerWithUser:(ICDUser *)user
+- (ICDMediaPickerViewController *)icd_instantiatePickerViewControllerWithUser:(ICDUser *)user
 {
     ICDMediaPickerViewController *controller = [self instantiateViewControllerWithIdentifier:ICDMediaPickerViewControllerIdentifier];
     
@@ -27,7 +27,7 @@ static NSString * const ICDCollageViewControllerIdentifier = @"ICDCollageViewCon
     return controller;
 }
 
-- (ICDCollageViewController *)instantiateCollageViewControllerWithSelectedMedia:(NSArray *)media
+- (ICDCollageViewController *)icd_instantiateCollageViewControllerWithSelectedMedia:(NSArray *)media
 {
     ICDCollageViewController *controller = [self instantiateViewControllerWithIdentifier:ICDCollageViewControllerIdentifier];
     

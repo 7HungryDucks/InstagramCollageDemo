@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  InstagramCollageDemo
+
+  Created by Yuri Kholod on 18.11.14.
+  Copyright (c) 2014 Yuri Kholod. All rights reserved.
+*/
+
+
+"mediaPicker.cancel" = "Ok";
+"mediaPicker.message" = "Выберите минимум один снимок";

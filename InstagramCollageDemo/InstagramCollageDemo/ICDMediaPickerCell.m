@@ -25,8 +25,8 @@
     [super layoutSubviews];
     
     self.contentView.frame = self.bounds;
-    self.borderColor = self.isSelected ? [UIColor blueColor] : [UIColor whiteColor];
-    self.borderWidth = self.isSelected ? 5.0 : 0.0;
+    self.icd_borderColor = self.isSelected ? [UIColor blueColor] : [UIColor whiteColor];
+    self.icd_borderWidth = self.isSelected ? 5.0 : 0.0;
 
 }
 

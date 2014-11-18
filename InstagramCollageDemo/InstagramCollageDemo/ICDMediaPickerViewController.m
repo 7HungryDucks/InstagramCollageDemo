@@ -63,16 +63,22 @@
 
 - (void)fetchData
 {
-    self.loading = YES;
+    self.icd_loading = YES;
     
+    __weak typeof(self) weakSelf = self;
     self.mediaSessionTask = [[ICDInstagramClient sharedInstance] fetchMediaWithUserIdentifier:self.userID completionBlock:^(ICDMedia *responseObject, NSError *error) {
         
-        self.loading = NO;
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        
+        if(!strongSelf)
+            return;
+        
+        strongSelf.icd_loading = NO;
         
         if(!error && responseObject.media.count > 0) {
             
-            self.dataSource = responseObject.media;
-            [self.collectionView reloadData];
+            strongSelf.dataSource = responseObject.media;
+            [strongSelf.collectionView reloadData];
         }
     }];
 }
@@ -81,16 +87,37 @@
 
 - (IBAction)collageButtonTouch:(id)sender
 {
+    NSArray *selectedItem = [self selectedItem];
+    
+    if(selectedItem) {
+        
+        id controller = [self.storyboard icd_instantiateCollageViewControllerWithSelectedMedia:selectedItem];
+    
+        [self.navigationController pushViewController:controller animated:YES];
+    } else {
+        
+        [[[UIAlertView alloc] initWithTitle:nil
+                                    message:NSLocalizedString(@"mediaPicker.message", nil)                                   delegate:nil
+                          cancelButtonTitle:NSLocalizedString(@"mediaPicker.cancel", nil)
+                          otherButtonTitles:nil, nil] show];
+    }
+}
+
+- (NSArray *)selectedItem
+{
     NSArray *selectedItem = [self.collectionView indexPathsForSelectedItems];
+    
+    if(selectedItem.count == 0) {
+        return nil;
+    }
+    
     NSMutableArray *selectedPhotos = [NSMutableArray array];
     
     for(NSIndexPath *indexPath in selectedItem) {
         [selectedPhotos addObject:self.dataSource[indexPath.row]];
     }
     
-    id controller = [self.storyboard instantiateCollageViewControllerWithSelectedMedia:selectedPhotos];
-    
-    [self.navigationController pushViewController:controller animated:YES];
+    return selectedPhotos;
 }
 
 #pragma mark - Collection view

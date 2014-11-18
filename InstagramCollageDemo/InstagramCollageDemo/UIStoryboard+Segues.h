@@ -13,7 +13,7 @@
 
 @interface UIStoryboard (Segues)
 
-- (ICDMediaPickerViewController *)instantiatePickerViewControllerWithUser:(ICDUser *)user;
-- (ICDCollageViewController *)instantiateCollageViewControllerWithSelectedMedia:(NSArray *)media;
+- (ICDMediaPickerViewController *)icd_instantiatePickerViewControllerWithUser:(ICDUser *)user;
+- (ICDCollageViewController *)icd_instantiateCollageViewControllerWithSelectedMedia:(NSArray *)media;
 
 @end

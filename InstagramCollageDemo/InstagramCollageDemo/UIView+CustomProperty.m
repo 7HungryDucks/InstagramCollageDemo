@@ -12,32 +12,32 @@
 
 #pragma mark cornerRadius
 
-- (void)setCornerRadius:(CGFloat)cornerRadius {
+- (void)setIcd_cornerRadius:(CGFloat)cornerRadius {
     self.layer.cornerRadius = cornerRadius;
 }
 
-- (CGFloat)cornerRadius {
+- (CGFloat)icd_cornerRadius {
     return self.layer.cornerRadius;
 }
 
 #pragma mark borderWidth
 
-- (void)setBorderWidth:(CGFloat)borderWidth {
+- (void)setIcd_borderWidth:(CGFloat)borderWidth {
     self.layer.borderWidth = borderWidth;
 }
 
-- (CGFloat)borderWidth {
+- (CGFloat)icd_borderWidth {
     return self.layer.borderWidth;
 }
 
 #pragma mark - border color
 
-- (void)setBorderColor:(UIColor *)borderColor
+- (void)setIcd_borderColor:(UIColor *)borderColor
 {
     self.layer.borderColor = [borderColor CGColor];
 }
 
-- (UIColor *)borderColor
+- (UIColor *)icd_borderColor
 {
     return [UIColor colorWithCGColor:self.layer.borderColor];
 }

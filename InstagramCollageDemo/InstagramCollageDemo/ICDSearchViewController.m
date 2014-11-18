@@ -35,13 +35,20 @@
     
     if(text && ![text isEqualToString:@""]) {
         
-        self.loading = YES;
+        self.icd_loading = YES;
+        
+        __weak typeof(self) weakSelf = self;
         self.searchSession = [[ICDInstagramClient sharedInstance] searchUserWithText:text completionBlock:^(ICDUsers *responseObject, NSError *error) {
 
-            self.loading = NO;
+            __strong typeof(weakSelf) strongSelf = weakSelf;
             
-            self.users = responseObject.users;
-            [self.tableView reloadData];
+            if(!strongSelf)
+                return;
+            
+            strongSelf.icd_loading = NO;
+            
+            strongSelf.users = responseObject.users;
+            [strongSelf.tableView reloadData];
         }];
         
     } else {
@@ -85,7 +92,7 @@
 {
     ICDUser *user = self.users[indexPath.row];
     
-    id controller = [self.storyboard instantiatePickerViewControllerWithUser:user];
+    id controller = [self.storyboard icd_instantiatePickerViewControllerWithUser:user];
     [self.navigationController pushViewController:controller animated:YES];
 }
 
