@@ -17,6 +17,7 @@
 		7EF4CC5E1A1B614C00BFC7B8 /* ICDHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF4CC5D1A1B614C00BFC7B8 /* ICDHTTPSessionManager.m */; };
 		7EF4CC611A1B61E400BFC7B8 /* ICDSessionTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF4CC601A1B61E400BFC7B8 /* ICDSessionTask.m */; };
 		7EF4CC671A1B631000BFC7B8 /* ICDRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF4CC661A1B631000BFC7B8 /* ICDRequest.m */; };
+		7EF4CC6F1A1B66AC00BFC7B8 /* ICDInstagramClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF4CC6E1A1B66AC00BFC7B8 /* ICDInstagramClient.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,8 @@
 		7EF4CC651A1B631000BFC7B8 /* ICDRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICDRequest.h; sourceTree = "<group>"; };
 		7EF4CC661A1B631000BFC7B8 /* ICDRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICDRequest.m; sourceTree = "<group>"; };
 		7EF4CC681A1B638200BFC7B8 /* ICDResponseProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICDResponseProtocol.h; sourceTree = "<group>"; };
+		7EF4CC6D1A1B66AC00BFC7B8 /* ICDInstagramClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICDInstagramClient.h; sourceTree = "<group>"; };
+		7EF4CC6E1A1B66AC00BFC7B8 /* ICDInstagramClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICDInstagramClient.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +136,7 @@
 		7EF4CC5A1A1B610600BFC7B8 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				7EF4CC691A1B667400BFC7B8 /* Instagram */,
 				7EF4CC5B1A1B611000BFC7B8 /* Base */,
 			);
 			name = Networking;
@@ -150,6 +154,15 @@
 				7EF4CC681A1B638200BFC7B8 /* ICDResponseProtocol.h */,
 			);
 			name = Base;
+			sourceTree = "<group>";
+		};
+		7EF4CC691A1B667400BFC7B8 /* Instagram */ = {
+			isa = PBXGroup;
+			children = (
+				7EF4CC6D1A1B66AC00BFC7B8 /* ICDInstagramClient.h */,
+				7EF4CC6E1A1B66AC00BFC7B8 /* ICDInstagramClient.m */,
+			);
+			name = Instagram;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -253,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7EF4CC671A1B631000BFC7B8 /* ICDRequest.m in Sources */,
+				7EF4CC6F1A1B66AC00BFC7B8 /* ICDInstagramClient.m in Sources */,
 				7EF4CC3D1A1B609700BFC7B8 /* ViewController.m in Sources */,
 				7EF4CC5E1A1B614C00BFC7B8 /* ICDHTTPSessionManager.m in Sources */,
 				7EF4CC3A1A1B609700BFC7B8 /* AppDelegate.m in Sources */,
