@@ -27,6 +27,8 @@
 		7EF4CC8B1A1B774600BFC7B8 /* UIViewController+Loading.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF4CC8A1A1B774600BFC7B8 /* UIViewController+Loading.m */; };
 		7EF4CC8E1A1B79A200BFC7B8 /* ICDMediaPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF4CC8D1A1B79A200BFC7B8 /* ICDMediaPickerViewController.m */; };
 		7EF4CC911A1B839600BFC7B8 /* ICDMediaPickerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF4CC901A1B839600BFC7B8 /* ICDMediaPickerCell.m */; };
+		7EF4CC941A1B858200BFC7B8 /* ICDMedia.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF4CC931A1B858200BFC7B8 /* ICDMedia.m */; };
+		7EF4CC971A1B85CD00BFC7B8 /* ICDMediaLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF4CC961A1B85CD00BFC7B8 /* ICDMediaLink.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +82,10 @@
 		7EF4CC8D1A1B79A200BFC7B8 /* ICDMediaPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICDMediaPickerViewController.m; sourceTree = "<group>"; };
 		7EF4CC8F1A1B839600BFC7B8 /* ICDMediaPickerCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICDMediaPickerCell.h; sourceTree = "<group>"; };
 		7EF4CC901A1B839600BFC7B8 /* ICDMediaPickerCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICDMediaPickerCell.m; sourceTree = "<group>"; };
+		7EF4CC921A1B858200BFC7B8 /* ICDMedia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICDMedia.h; sourceTree = "<group>"; };
+		7EF4CC931A1B858200BFC7B8 /* ICDMedia.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICDMedia.m; sourceTree = "<group>"; };
+		7EF4CC951A1B85CD00BFC7B8 /* ICDMediaLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICDMediaLink.h; sourceTree = "<group>"; };
+		7EF4CC961A1B85CD00BFC7B8 /* ICDMediaLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICDMediaLink.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,6 +209,10 @@
 				7EF4CC751A1B68B600BFC7B8 /* ICDUsers.m */,
 				7EF4CC771A1B68C300BFC7B8 /* ICDUser.h */,
 				7EF4CC781A1B68C300BFC7B8 /* ICDUser.m */,
+				7EF4CC921A1B858200BFC7B8 /* ICDMedia.h */,
+				7EF4CC931A1B858200BFC7B8 /* ICDMedia.m */,
+				7EF4CC951A1B85CD00BFC7B8 /* ICDMediaLink.h */,
+				7EF4CC961A1B85CD00BFC7B8 /* ICDMediaLink.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -345,6 +355,7 @@
 				7EF4CC881A1B75E300BFC7B8 /* ICDLoadingView.m in Sources */,
 				7EF4CC8B1A1B774600BFC7B8 /* UIViewController+Loading.m in Sources */,
 				7EF4CC671A1B631000BFC7B8 /* ICDRequest.m in Sources */,
+				7EF4CC971A1B85CD00BFC7B8 /* ICDMediaLink.m in Sources */,
 				7EF4CC6F1A1B66AC00BFC7B8 /* ICDInstagramClient.m in Sources */,
 				7EF4CC851A1B75A200BFC7B8 /* UIStoryboard+Segues.m in Sources */,
 				7EF4CC721A1B67EA00BFC7B8 /* ICDRequest+Factory.m in Sources */,
@@ -357,6 +368,7 @@
 				7EF4CC791A1B68C300BFC7B8 /* ICDUser.m in Sources */,
 				7EF4CC911A1B839600BFC7B8 /* ICDMediaPickerCell.m in Sources */,
 				7EF4CC371A1B609700BFC7B8 /* main.m in Sources */,
+				7EF4CC941A1B858200BFC7B8 /* ICDMedia.m in Sources */,
 				7EF4CC761A1B68B600BFC7B8 /* ICDUsers.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

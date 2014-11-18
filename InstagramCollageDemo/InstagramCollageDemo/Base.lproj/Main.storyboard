@@ -144,6 +144,9 @@
                             <constraint firstItem="8cX-9M-6bk" firstAttribute="top" secondItem="WDX-wt-xZh" secondAttribute="bottom" constant="8" id="g8x-if-Btn"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="gb3-Kg-VGL" id="Hf0-sk-mx7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iu6-Rg-jdT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
