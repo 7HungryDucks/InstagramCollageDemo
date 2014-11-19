@@ -141,9 +141,17 @@
     ICDMediaLink *mediaLink = self.dataSource[indexPath.row];
     
     cell.indexPath = indexPath;
+    
+    __weak typeof(self) weakSelf = self;
+    
     [[ICDInstagramClient sharedInstance] imageWithURL:mediaLink.link withCompletionBlock:^(UIImage *image, NSError *error) {
         
-        if([cell.indexPath isEqual:indexPath])
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        
+        if(!strongSelf)
+            return;
+        
+        if([cell.indexPath compare:[strongSelf.collectionView indexPathForCell:cell]])
             cell.mediaImageView.image = image;
     }];
     

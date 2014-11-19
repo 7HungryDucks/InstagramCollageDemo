@@ -79,9 +79,15 @@
     [cell configureWithUser:user];
     cell.indexPath = indexPath;
     
+    __weak typeof(self) weakSelf = self;
     [[ICDInstagramClient sharedInstance] imageWithURL:user.profilePictures withCompletionBlock:^(UIImage *image, NSError *error) {
         
-        if([cell.indexPath isEqual:indexPath])
+        __strong typeof(weakSelf) strongSelf = weakSelf;
+        
+        if(!strongSelf)
+            return;
+        
+        if([cell.indexPath compare:[strongSelf.tableView indexPathForCell:cell]])
             cell.profileImageView.image = image;
     }];
     
